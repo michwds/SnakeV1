@@ -6,10 +6,12 @@ namespace Snake
     {
 
         private readonly LinkedList<Position> pos = new LinkedList<Position>();
+        public Boolean isAlive = true;
         public Direction Dir {get; private set;}
+        public int Score {get; set;}
         public PlayerObject(Value[,] grid, int col)
         {
-
+            Score = 0;
             for (int r = 0; r < 2; r++)
             {
                 grid[r, col] = Value.Snake;
