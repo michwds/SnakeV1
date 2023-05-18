@@ -6,13 +6,13 @@ namespace Snake{
 
         }
         private readonly Random random = new Random();
-        public Value[,] AddFood(List<Position> positions, Value[,] grid){
+        public int AddFood(List<Position> positions, Value[,] grid){
             if(positions.Count==0)
-                return null;
+                return 0;
             else{
                 Position spawn = positions[random.Next(positions.Count)];
                 grid[spawn.Row, spawn.Col] = Value.Food;
-                return grid;
+                return 1;
             }
         }
     }

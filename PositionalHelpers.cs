@@ -3,8 +3,7 @@ namespace Snake
     public enum Value
     {
         Empty,
-        P1Snake,
-        P2Snake,
+        Snake,
         Food,
         OOB
     }
@@ -84,4 +83,5 @@ namespace Snake
             return !(left==right);
         }
     }
+
 }
