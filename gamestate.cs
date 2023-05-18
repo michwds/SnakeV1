@@ -25,8 +25,8 @@ namespace Snake
             for (int i = 0; i < numPlayers; i++)
             {
                 players[i] = new PlayerObject(Grid, (i + 1) * Cols / (numPlayers + 1));
+                Food.AddFood(GetEmptyPositions(), Grid);
             }
-            Food.AddFood(GetEmptyPositions(), Grid);
         }
 
 
